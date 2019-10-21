@@ -1,4 +1,5 @@
 <div class="container mt-4">
+<div class="jumbotron border border-primary bg-jumbotron-bg">
 <div class="row justify-content-center">
 <h3 class="mb-4">Find any Flickr user's photos by entering their ID in the box below.</h3>
 </div>
@@ -6,12 +7,13 @@
     <%= form_tag("/", method: "post", :class => "form-row align-items-center") do %>
       <div class="col-auto">
         <%= label_tag(:id, "User ID:", :class => "sr-only") %>
-        <%= text_field_tag(:id, "", {:class => "form-control", :placeholder => "Enter User ID..."} ) %>
+        <%= text_field_tag(:id, "", {:class => "form-control border border-primary", :placeholder => "Enter User ID..."} ) %>
       </div>
       <div class="col-auto">
         <%= submit_tag("Search", :class => "btn btn-primary") %>
       </div>
     <% end %>
+  </div>
   </div>
   <div class="row justify-content-center">
     <% flash.each do |key, value| %>
